@@ -15,11 +15,11 @@ def goClickMiddle(x):
     pyautogui.moveTo(x.left/2 +x.width/4 , x.top/2 + x.height/4)
     mouse.click(Button.middle)
 
-def checkPriceLocations(x):
+def checkPriceLocations(x): #this function is to get rid of all duplicates
     count = 0
     locations = {}
     for i in x:
-        locations[count] = i.left
+        locations[count] = i.left   #x parameter is the list of coordinates 
         count = count + 1
     deletethese=[]
     for i in range(len(x)):
